@@ -1,0 +1,53 @@
+{include file="common/top"}
+{include file="common/header_top"}
+{include file="common/menu"}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      
+    </section>
+
+    <!-- Main content -->
+    <section class="invoice">
+      <!-- title row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+             系统设置
+          </h2>
+        </div>
+        <!-- /.col -->
+      </div>
+
+      <!-- Table row -->
+      <div class="row">
+          <div class="box box-primary">
+              <!-- form start -->
+              <form role="form" action="{:url('Main/edit_sys')}" method="post">
+                <div class="box-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">平台名称</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="平台名称" name="title" value="{$sys.title}">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">网站域名</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="审核开关" name="url" value="{$sys.url}">
+                  </div>
+
+                </div>
+                <!-- /.box-body -->
+  
+                <div class="box-footer">
+                  <button type="submit" class="btn btn-primary">修改</button>
+                </div>
+              </form>
+            </div>
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    <div class="clearfix"></div>
+  </div>
+  <!-- /.content-wrapper -->
+  {include file="common/footer"}

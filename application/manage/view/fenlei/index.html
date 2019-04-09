@@ -1,0 +1,56 @@
+{include file="common/top"}
+{include file="common/header_top"}
+{include file="common/menu"}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      
+    </section>
+
+    <!-- Main content -->
+    <section class="invoice">
+      <!-- title row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+            <i class="fa fa-user"></i> 分类管理<a href="{:url('Fenlei/create')}" class="btn btn-info  pull-right">添加分类</a> 
+          </h2>
+        </div>
+        <!-- /.col -->
+      </div>
+
+      <!-- Table row -->
+      <div class="row">
+        <div class="col-xs-12 table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>分类ID</th>
+              <th>分类名称</th>
+              <th>操作</th>
+              <th>删除</th>
+            </tr>
+            </thead>
+            <tbody>
+           {volist name="fenlei" id="f"}
+            <tr>
+              <td>{$f.fid}</td>
+              <td>{$f.f_name}</td>
+              <td><a href="{:url('Fenlei/edit',['id'=>$f.fid])}" class="btn btn-success">编辑</a></td>
+              <td><a href="{:url('Fenlei/edit',['id'=>$f.fid])}" class="btn btn-danger">删除</a></td>
+            </tr>
+            {/volist}
+            </tbody>
+          </table>
+          {$fenlei|raw}
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    <div class="clearfix"></div>
+  </div>
+  <!-- /.content-wrapper -->
+  {include file="common/footer"}

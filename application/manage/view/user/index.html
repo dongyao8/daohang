@@ -1,0 +1,71 @@
+{include file="common/top"}
+{include file="common/header_top"}
+{include file="common/menu"}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      
+    </section>
+
+    <!-- Main content -->
+    <section class="invoice">
+      <!-- title row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+            <i class="fa fa-user"></i> 用户管理
+            <div class="btn-group pull-right">
+                    <a href="{:url('User/index')}" class="btn btn-warning">待审用户</a>
+                    <a href="{:url('User/index',['state'=>1])}" class="btn btn-success">已通过用户</a>
+                    <a href="{:url('User/index',['state'=>'-1'])}" class="btn btn-danger">已拒绝用户</a>
+                  </div>
+          </h2>
+        </div>
+        <!-- /.col -->
+      </div>
+
+      <!-- Table row -->
+      <div class="row">
+        <div class="col-xs-12 table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>UID</th>
+              <th>用户名</th>
+              <th>邮箱</th>
+              <th>注册时间</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="user" id="u"}
+            <tr>
+              <td>{$u.uid}</td>
+              <td>{$u.username}</td>
+              <td>{$u.email}</td>
+              <td>{$u.regtime|date="Y-m-d H:i:s"}</td>
+              <td>
+                {switch u.state}
+                    {case 1}<a href="{:url('User/jujue',['uid'=>$u.uid])}" class="btn btn-info">冻结</a>
+                    {/case}
+                    {case 0}<a href="{:url('User/tongguo',['uid'=>$u.uid])}" class="btn btn-success">通过</a>
+                    <a href="{:url('User/jujue',['uid'=>$u.uid])}" class="btn btn-danger">拒绝</a>{/case}
+                    {default /}<a href="{:url('User/tongguo',['uid'=>$u.uid])}" class="btn btn-success">恢复正常</a>
+                {/switch}
+              </td>
+            </tr>
+            {/volist}
+            </tbody>
+          </table>
+          {$user|raw}
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    <div class="clearfix"></div>
+  </div>
+  <!-- /.content-wrapper -->
+  {include file="common/footer"}

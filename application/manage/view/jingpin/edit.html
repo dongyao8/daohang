@@ -1,0 +1,64 @@
+{include file="common/top"}
+{include file="common/header_top"}
+{include file="common/menu"}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      
+    </section>
+
+    <!-- Main content -->
+    <section class="invoice">
+      <!-- title row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+              <a href="{:url('Jingpin/index')}" class="btn btn-warning">返回列表</a>
+          </h2>
+        </div>
+        <!-- /.col -->
+      </div>
+
+      <!-- Table row -->
+      <div class="row">
+          <div class="box box-primary">
+              <div class="box-header with-border">
+                <h3 class="box-title">{$link.l_name} | 编辑中</h3>
+              </div>
+              <!-- /.box-header -->
+              <!-- form start -->
+              <form role="form" action="{:url('Jingpin/update',['id'=>$link.lid])}" method="post"  enctype="multipart/form-data">
+                <div class="box-body">
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">网站名称</label>
+                          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="网站名称" name="l_name" value="{$link.l_name}">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">网站地址</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="网站地址" name="l_url" value="{$link.l_url}">
+                          </div>
+                          <div class="form-group">
+                              <label for="exampleInputEmail1">LOGO图片<img class="direct-chat-img" src="__STATIC__/LOGO/{$link.l_pic}" alt="暂无"></label>
+                              <input type="file" class="form-control" id="exampleInputEmail1" placeholder="LOGO图片" name="l_pic">
+                            </div>
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">排序[数值越大，排序越靠前]</label>
+                      <input type="number" class="form-control" id="exampleInputEmail1" placeholder="排序" name="l_sort"  value="{$link.l_sort}">
+                    </div>
+                </div>
+                <!-- /.box-body -->
+  
+                <div class="box-footer">
+                  <button type="submit" class="btn btn-primary">修改</button>
+                </div>
+              </form>
+            </div>
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    <div class="clearfix"></div>
+  </div>
+  <!-- /.content-wrapper -->
+  {include file="common/footer"}

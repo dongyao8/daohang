@@ -1,0 +1,56 @@
+{include file="common/top"}
+{include file="common/header_top"}
+{include file="common/menu"}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      
+    </section>
+
+    <!-- Main content -->
+    <section class="invoice">
+      <!-- title row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+            <i class="fa fa-user"></i> 网址管理<a href="{:url('Link/create')}" class="btn btn-info  pull-right">添加网址</a> 
+          </h2>
+        </div>
+        <!-- /.col -->
+      </div>
+
+      <!-- Table row -->
+      <div class="row">
+        <div class="col-xs-12 table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>网址ID</th>
+              <th>网址名称</th>
+              <th>编辑</th>
+              <th>删除</th>
+            </tr>
+            </thead>
+            <tbody>
+           {volist name="link" id="l"}
+            <tr>
+              <td>{$l.lid}</td>
+              <td>{$l.l_name}</td>
+              <td><a href="{:url('link/edit',['id'=>$l.lid])}" class="btn btn-success">编辑</a></td>
+              <td><a href="{:url('link/delete',['id'=>$l.lid])}" class="btn btn-danger">删除</a></td>
+            </tr>
+            {/volist}
+            </tbody>
+          </table>
+          {$link|raw}
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    <div class="clearfix"></div>
+  </div>
+  <!-- /.content-wrapper -->
+  {include file="common/footer"}

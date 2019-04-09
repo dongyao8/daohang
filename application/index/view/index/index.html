@@ -1,0 +1,177 @@
+{include file="common/header"}
+
+  <body class="">
+    <div class="page">
+      <div class="page-main">
+            {include file="common/top_user"}
+            {include file="common/menu"}
+        <div class="my-3 my-md-5">
+          <div class="container">
+            <!-- 搜索框 -->
+            <div>
+                <div class="card">
+                    <div class="card-header">
+                    <h3 class="card-title">百度搜索</h3>
+                    </div>
+                    <form action="http://www.baidu.com/s" method="get" target="_blank">
+                    <div class="card-body">
+                        <div class="input-group col-lg-8 col-md-10 m-auto">
+                            
+                            <input type="text" name="wd" class="form-control" placeholder="百度一下，你就知道">
+                            <span class="input-group-append">
+                                <button class="btn btn-primary" type="submit">百度一下</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+            
+            <!-- END搜索框 -->
+            <div class="row row-cards row-deck">
+              <div class="col-12">
+                <div class="card">
+                  <div class="table-responsive">
+                    <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+                      <tbody>
+                        <tr>
+                          {volist name="jingpin" id="j" offset="0" length='6'}
+                          <td style="text-align:center">
+                              <a href="{$j.l_url}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url(__STATIC__/LOGO/{$j.l_pic})"></div>
+                              <div>{$j.l_name}</div></a>
+                          </td>
+                          {/volist}
+                        </tr>
+                        <tr>
+                            {volist name="jingpin" id="j" offset="6" length='6'}
+                            <td style="text-align:center">
+                                <a href="{$j.l_url}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url(__STATIC__/LOGO/{$j.l_pic})"></div>
+                                <div>{$j.l_name}</div></a>
+                            </td>
+                            {/volist}
+                              </tr>
+                              <tr>
+                                  {volist name="jingpin" id="j" offset="12" length='6'}
+                                  <td style="text-align:center">
+                                      <a href="{$j.l_url}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url(__STATIC__/LOGO/{$j.l_pic})"></div>
+                                      <div>{$j.l_name}</div></a>
+                                  </td>
+                                  {/volist}
+                           </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-3" id="remen" style="display:block">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">实用工具</h4>
+                      </div>
+                      <table class="table card-table">
+                        <tbody>
+                         <tr>
+                          <td width="1"><i class="fa fa-chrome text-muted"></i></td>
+                          <td> <a target="_blank" href="https://tianqi.qq.com/">天气预报</a></td>
+                          <td class="text-right"><span class="text-muted">[健康]</span></td>
+                        </tr>
+                        <tr>
+                          <td><i class="fa fa-firefox text-muted"></i></td>
+                          <td><a target="_blank" href="http://www.kuaidi100.com/">快递查询</a></td>
+                          <td class="text-right"><span class="text-muted">[生活]</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-safari text-muted"></i></td>
+                            <td><a target="_blank" href="https://translate.google.cn">在线翻译</a></td>
+                            <td class="text-right"><span class="text-muted">[学习]</span></td>
+                        </tr>
+                        <tr>
+                          <td><i class="fa fa-safari text-muted"></i></td>
+                          <td><a target="_blank" href="http://www.variflight.com/">航班查询</a></td>
+                          <td class="text-right"><span class="text-muted">[生活]</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-safari text-muted"></i></td>
+                            <td><a target="_blank" href="http://www.ly.com/huochepiao?refid=48050718">火车抢票</a></td>
+                            <td class="text-right"><span class="text-muted">[生活]</span></td>
+                          </tr>
+                          <tr>
+                              <td><i class="fa fa-safari text-muted"></i></td>
+                              <td><a target="_blank" href="https://www.boip.net/">我的IP地址</a></td>
+                              <td class="text-right"><span class="text-muted">[网络]</span></td>
+                            </tr>
+                      </tbody></table>
+                    </div>
+
+                    <div class="card">
+                            <div class="card-header">
+                              <h4 class="card-title">快捷应用</h4>
+                            </div>
+                            <table class="table card-table">
+                              <tbody>
+                              <tr>
+                                <td width="1"><i class="fa fa-chrome text-muted"></i></td>
+                                <td><a target="_blank" href="https://wx.qq.com/">微信网页版</a></td>
+                              <td class="text-right"><span class="text-muted">[网络]</span></td>
+                              </tr>
+                              <tr>
+                                  <td width="1"><i class="fa fa-chrome text-muted"></i></td>
+                                  <td><a target="_blank" href="https://www.ssyer.com">无版权图片</a></td>
+                                <td class="text-right"><span class="text-muted">[素材]</span></td>
+                              </tr>
+                              <tr>
+                                  <td width="1"><i class="fa fa-chrome text-muted"></i></td>
+                                  <td><a target="_blank" href="https://www.gaoding.com">海报设计</a></td>
+                                <td class="text-right"><span class="text-muted">[免费]</span></td>
+                              </tr>
+                              <tr>
+                                  <td width="1"><i class="fa fa-chrome text-muted"></i></td>
+                                  <td><a target="_blank" href="http://www.ypppt.com/">PPT模板</a></td>
+                                <td class="text-right"><span class="text-muted">[下载]</span></td>
+                              </tr>
+                              <tr>
+                                  <td width="1"><i class="fa fa-chrome text-muted"></i></td>
+                                  <td><a target="_blank" href="https://docs.qq.com">腾讯文档</a></td>
+                                <td class="text-right"><span class="text-muted">[推荐]</span></td>
+                              </tr>
+                              <tr>
+                                  <td width="1"><i class="fa fa-chrome text-muted"></i></td>
+                                  <td><a target="_blank" href="https://www.uzer.me">超级云应用</a></td>
+                                <td class="text-right"><span class="text-muted">[免下载]</span></td>
+                              </tr>
+                            </tbody></table>
+                          </div>
+                </div>
+
+              <div class="col-lg-9">
+                <div class="card">
+                  <div class="table-responsive">
+                    <table class="table card-table table-vcenter text-nowrap">
+                      <tbody>
+                      {volist name="fenlei" id="f"}
+                        <?php $get_link = get_link($f['fid']);?>
+                        <tr>
+                          <td><span class="text-success">[{$f.f_name}]</span></td>
+                            
+                            {volist name='get_link' id="l"}
+                          <td><a target="_blank" href="{$l.l_url}" class="text-primary">{$l.l_name}</a></td>
+                            {/volist}
+                        </tr>
+                        {/volist}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {include file="common/footer"}
+      <!-- 手机设备，隐藏热门榜单 -->
+      <script>
+          if(window.screen.width < 700){
+              document.getElementById('remen').style.display = 'none';
+          }
+        </script>
