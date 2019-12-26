@@ -1,6 +1,6 @@
-![](http://hao.dongyao.ren/static/demo/3.png) 
+![](https://images.gitee.com/uploads/images/2019/1212/102222_03d55ecf_977589.png) 
 
-零广告，零插件的纯净网址导航
+元旦节左右即将发布全新重构版本系统，集中完善了近期大家提交的各种需求和功能，敬请期待！
 ===============
 #### 前言：
 + 如果你是个萌妹子，或者对技术一窍不通，那就不用往下看啦，直接设置演示网址作为主页就OK啦！
@@ -63,8 +63,8 @@ mysql数据库
 ## 演示图片
 + [点击查看演示效果](http://hao.dongyao.ren)【手机访问有自适应效果】
 
-![](http://hao.dongyao.ren/static/demo/1.png) 
-![](http://hao.dongyao.ren/static/demo/2.png) 
+![](https://images.gitee.com/uploads/images/2019/1212/102222_9f68381b_977589.png) 
+![](https://images.gitee.com/uploads/images/2019/1212/102221_84fd71f1_977589.png) 
 
 
 ## 使用范围
